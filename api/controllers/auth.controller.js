@@ -9,7 +9,7 @@ class Auth {
       const { username, email, password } = req.body;
 
       if (!username || !email || !password) {
-        next(errorHandler(400, "All fields are required"));
+        return next(errorHandler(400, "All fields are required"));
       }
 
       const hashedPassword = bcryptjs.hashSync(password, 10);

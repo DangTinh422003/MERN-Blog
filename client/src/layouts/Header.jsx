@@ -33,11 +33,17 @@ const Header = () => {
         <AiOutlineSearch />
       </Button>
       <div className="flex gap-2 md:order-2">
-        <Button className="w-12 h-10 hidden sm:inline" color="gray" pill>
+        <Button
+          className="w-12 h-10 hidden sm:inline-flex items-center justify-center"
+          color="gray"
+          pill
+        >
           <FaMoon />
         </Button>
         <Link to={"/sign-in"}>
-          <Button gradientDuoTone={"purpleToBlue"}>Sign In</Button>
+          <Button outline gradientDuoTone={"purpleToBlue"}>
+            Sign In
+          </Button>
         </Link>
         <Navbar.Toggle />
       </div>
